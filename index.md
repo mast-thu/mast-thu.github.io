@@ -26,11 +26,3 @@
 
 ## References 参考书目
 
-## Contacts 联系方式
-
- - 乐团联系邮箱 [15130229@qq.com](mailto:15130229@qq.com)
- - 微信公众号 [zhiyinyaji](https://mp.weixin.qq.com/profile?src=3&timestamp=1514265414&ver=1&signature=hD5GFib0g7XCEZO9N-I*toqXEqLqbKZSHXyWO-Og-iLVH-W4KRi0RHQCUJHWoy4lMBdNbKBWMQOH-c2whWPhQw==)
- - 团长: [刘沫](mailto:liumo@tsinghua.edu.cn)
- - 如本页面需要更新，请联系[王康](mailto:scateu@gmail.com?subject=知音雅集GitHub Pages更新请求)
- - <http://www.tsinghua.org.cn/xyll/xqzz/qhxymlt.htm>
-
