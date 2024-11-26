@@ -35,7 +35,7 @@
  - 结构风格: B-Roll over talking heads，不会出差错，四平八稳
  - 画面时长: 以自然语速能完整描述画面的时长为宜
  - 画面时长: Walter Murch经常会练习以正常速度播放，在剪辑点按下空格暂停，像打靶。如果多次打靶都打到同一个位置上，则证明剪辑点是精确的。
- - Cut on matched action: 比如电影Matrix中，Murphy的转身，由Master shot转为CU。
+ - Cut on matched action: 比如电影Matrix中，Morpheus的转身，由Master shot转为CU。
  - Cut near the blink of an eye: In the blink of an eye书中，作者Walter Murch认为，人的眨眼表示对信息的接收完成，眨眼类似于存盘，在观众或演员的自然眨眼点处剪辑，也是较好的位置。
  - Inserts, Cutaway: 都属于B-roll，但Insert和主画面之间动作连贯，比如主画面在拧一个旋钮，Insert可以拍拧旋钮的动作；比如上菜，盘子由服务员贴近桌子的那一刻，就可以变到盘子内容特写了(包括服务员的手)。据说片场中专门会有Insert Day，专门留最后一天拍所需要的Inserts。这一点，借鉴之，采访后补拍对应的B-roll。
  - Reaction, Kuleshov effect
