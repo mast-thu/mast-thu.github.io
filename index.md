@@ -11,9 +11,9 @@
 
 ### 多媒体部分
 
-视频在博物馆中也是一种特殊的展品。例如，在荷兰的犹太人纪念馆里，将二战大屠杀幸存者的访谈放在显示器上，旁边有耳机，观众走到旁边，可以坐下，戴上耳机（可以是多副），听取口述历史。再如美国的二战博物馆，在Youtube上有口述历史系列访谈。
+视频在博物馆中也是一种特殊的展品。例如，荷兰的犹太人纪念馆里，将二战大屠杀幸存者的访谈放在显示器上，旁边有耳机，观众走到旁边，可以坐下，戴上耳机（可以是多副），听取口述历史。再如美国的二战博物馆，在Youtube上有口述历史系列访谈。
 
-剪辑长篇访谈音视频(talking heads)，特别是在资源有限(设备、人员、时间、资金）的情况下，有几个问题。一是尽可能保证音频/视频的高品质，使用20%的成本，达到80%的专业制作团队的水平；二是提高剪辑效率，Radiolab声称的素材比是45:1，Apocalypse Now的素材比是90:1，Michael Rosenblum的建议是600分钟真实事件-20分钟的拍摄素材-1分钟成片，在这样海量素材之下，需要有高效的剪辑工具。课程任课老师之一康师傅在录制自己的Podcast的经验之上，结合[BBC Paper Edit](https://bbcnewslabs.co.uk/projects/digital-paper-edit/)的方法论，制作了开源工具["糙音速剪辑"](https://github.com/scateu/tsv_edl.vim)，发布到欧洲开源开发者大会[FOSDEM](https://fosdem.org/2024/schedule/event/fosdem-2024-2804-edit-video-audio-with-or-without-vim/)上，来自德国的记者试用后甚至主动帮忙写了一篇[教程](https://zerwuerfnis.org/paper-cut-audio-editing-for-radio-journalism)。
+剪辑长篇访谈音视频(talking heads)，特别是在资源有限(设备、人员、时间、资金）的情况下，有几个问题。一是尽可能保证音频/视频的高品质，使用20%的成本，达到80%的专业制作团队的水平；二是提高剪辑效率，Radiolab声称的素材比是45:1，Apocalypse Now的素材比是90:1，Michael Rosenblum的建议是600分钟真实事件-20分钟的拍摄素材-1分钟成片，在这样海量素材之下，需要有高效的剪辑工具。任课老师之一康师傅将录制自己的Podcast时的经验，结合[BBC Paper Edit](https://bbcnewslabs.co.uk/projects/digital-paper-edit/)的方法论，制作了开源工具["糙音速剪辑"](https://github.com/scateu/tsv_edl.vim)，发布到欧洲开源开发者大会[FOSDEM](https://fosdem.org/2024/schedule/event/fosdem-2024-2804-edit-video-audio-with-or-without-vim/)，来自德国的记者试用后甚至主动帮忙写了一篇[教程](https://zerwuerfnis.org/paper-cut-audio-editing-for-radio-journalism)。
 
 
 
