@@ -20,18 +20,19 @@
  - 多机位 - Multicam: 采访中多机位的必要性: 把说话过程剪断，会使人的变化显得跳跃。而人类的视觉对于小的变化很敏感，但对于大的角度变化(大于30度的机位变化，30度原则)反而可以接受。在谈话的剪断跳跃点需要切到另一台摄像机，才能显得比较自然。
  - Multicam with sound: 使用另一只手机作为录音机，近场收声。以击掌代替场记版🎬
  - 180度原则，30度原则
- - 景别如音阶，记住各景别的高度(下缘)，如CU - MS
- - Eye line: 画面
+ - 景别如音阶，记住各景别的高度(下缘)，如CU(到肩)，BCU(Big Close-Up, 也称Choke，掐脖)，ECU(Extreme CU, 也称意大利西部片CU，只拍眼)，MS，WS等。尽可能使用标准景别语言。
  - Inverview的拍法 - BBC的Mojo持机法: 左手抱在右腑下撑住右肘，右手持手机(镜头一定擦干净)，作奥特曼状，构图使受访人在画面左侧看向右(或居右侧看向左)，直视采访人，而非镜头。
+ - Eye line match: 画面双方地位要平等，眼睛的位置要平齐，眼看向的角度要对称。
  - B-roll的拍法 - Michael Roseblum 的 5-shot 方法，在BBC、汤森等新闻机构广泛使用。1. CU on action(手) 2. CU on face 3. WS on both 4. OTS(Over the Shoulder，也称PoV，Point of view，主观视觉) 5. 任意creative角度。
- - Shoot where it's not: 抢占先机，例如拍门把手，守画面而等受访者入；同时在受访者离开画面后
+ - Shoot where it's not: 抢占先机，例如拍门把手，守画面而等受访者入；
+ - Let her leave: 同时在受访者离开画面后，不要追着画面，让受访者离开画面，观众自然会想去看受访者去哪里了，即为一个非常好的剪辑点。
  - 结构风格: Michael Roseblum 的 "Wow - Pirate - Star - Arc of story - Conclusion" 方法，每一个部分都是5 shots方法拍摄
  - 结构风格: B-Roll over talking heads，不会出差错，四平八稳
  - 画面长度: 以自然语速能完整描述画面的时长为宜
  - 画面长度: Walter Murch经常会练习以正常速度播放，在剪辑点按下空格暂停，像打靶。如果多次打靶都打到同一个位置上，则证明剪辑点是精确的。
  - Cut on matched action: 比如电影Matrix中，Murphy的转身，由Master shot转为CU。
  - Cut near the blink of an eye: In the blink of an eye书中，作者Walter Murch认为，人的眨眼表示对信息的接收完成，眨眼类似于存盘，在观众或演员的自然眨眼点处剪辑，也是较好的位置。
- - Inserts, Cutaway: 都属于B-roll，但Insert和主画面之间动作连贯，比如主画面在拧一个旋钮，Insert可以拍拧旋钮的动作；比如
+ - Inserts, Cutaway: 都属于B-roll，但Insert和主画面之间动作连贯，比如主画面在拧一个旋钮，Insert可以拍拧旋钮的动作；比如上菜，盘子由服务员贴近桌子的那一刻，就可以变到盘子内容特写了(包括服务员的手)。据说片场中专门会有Insert Day，专门留最后一天拍所需要的Inserts。这一点，借鉴之，采访后补拍对应的B-roll。
  - 音画时机: Always J Cut - Steve Audette of PBS;
  - 音画时机: MTV，剪辑点先于重拍出现，就像闪电打雷轰隆隆。
  - 剪辑时机: 对话双方，一方说完话镜头应该立即切到对方，若多停留，则可能造成此方说话者被打造成反派。
@@ -43,9 +44,11 @@
 
 如Walter Murch的Rule of 6: Emotion 51%, Story 23%, Rhythm 10%, Eye-trace 7%, Two-dimensional plane of screen 5%, Three-dimensional space of action 4%，给观者带来的情感永远是最重要的。
 
-参考书:
+参考:
  - In the blink of an eye, by Walter Murch
  - iPhone Millionaire How to Create and Sell Cutting-Edge Video, by Michael Rosenblum
+ - 纪录片 The Cutting Edge - The Magic of Movie Editing
+
 ## 课程花絮
 
 ## 展览回顾
