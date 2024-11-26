@@ -21,7 +21,7 @@
  - Multicam with sound: 使用另一只手机作为录音机，近场收声。以击掌代替场记版🎬
  - 180度原则，30度原则
  - 景别如音阶，记住各景别的高度(下缘)，如CU(到肩)，BCU(Big Close-Up, 也称Choke，掐脖)，ECU(Extreme CU, 也称意大利西部片CU，只拍眼)，MS，WS等。尽可能使用标准景别语言。
- - Inverview的拍法 - BBC的Mojo持机法: 左手抱在右腑下撑住右肘，右手持手机(镜头一定擦干净)，作奥特曼状，构图使受访人在画面左侧看向右(或居右侧看向左)，直视采访人，而非镜头。
+ - Inverview的拍法 - BBC的Mojo持机法: 左手抱在右腋下撑住右肘，右手持手机(镜头一定擦干净)，作奥特曼状，构图使受访人在画面左侧看向右(或居右侧看向左)，直视采访人，而非镜头。
  - Eye line match: 画面双方地位要平等，眼睛的位置要平齐，眼看向的角度要对称。
  - 目光坚定: 受访者看向的位置一定要固定，平行于地面，向上或向下，或斜视，可以将采访者打造成反派。
  - B-roll的拍法 - Michael Roseblum 的 5-shot 方法，在BBC、汤森等新闻机构广泛使用。擦干净镜头，一动不动，屏住呼吸，以下5步各拍10秒。1. CU on action(手) 2. CU on face 3. WS on both 4. OTS(Over the Shoulder，也称PoV，Point of view，主观视觉) 5. 任意creative角度。
