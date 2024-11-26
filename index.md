@@ -17,7 +17,7 @@
 
 
 
-进一步，我们不止于剪辑talking reads，我们尝试从百年电影工业中汲取养分，服务于展览叙事。
+进一步，我们不止于剪辑talking heads 🗣️，我们尝试从百年电影工业中汲取养分，服务于展览叙事。
 
 <details markdown="1"><summary> ▶️  点此展开 </summary>
 
