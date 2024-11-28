@@ -29,7 +29,11 @@
  - 视线: Eye line match: 画面双方地位要平等，眼睛的位置要平齐，眼看向的角度要对称。
  - 目光坚定: 受访者看向的位置一定要固定，且只能看向一个人，平行于地面; 向上或向下，或斜视，或视线忽左忽右，可以将采访者打造成反派。
  - B-roll的拍法 - Michael Roseblum 的 5-shot 方法，在BBC、汤森等新闻机构广泛使用。擦干净镜头，一动不动，屏住呼吸，以下5步各拍10秒。
-   * 1. CU on action(手) 2. CU on face 3. WS on both 4. OTS(Over the Shoulder，也称PoV，Point of view，主观视觉) 5. 任意creative角度。
+  1. CU on action(手) 
+  2. CU on face 
+  3. WS on both 
+  4. OTS(Over the Shoulder，也称PoV，Point of view，主观视觉) 
+  5. 任意creative角度
  - "Shoot where it's not": 抢占先机，例如拍门把手，守画面而等受访者入；
  - "Let her leave": 同时在受访者离开画面后，不要追着画面，让受访者离开画面，观众自然会想去看受访者去哪里了，即为一个非常好的剪辑点。
  - 结构风格: Michael Rosenblum 的 "Wow - Pirate - Star - Arc of story - Conclusion" 方法，每一个部分都是5 shots方法拍摄
