@@ -37,26 +37,10 @@ summary {
 details[open] summary {
   background: #333;
   color: #FFF;
+  margin-bottom: 10px; // added Aug 7, 2024
 }
 
 details[open] {
   padding-bottom: 15px; // added Aug 7, 2024
 }
 
-summary:hover {
-  background: #333;
-  color: #FFF;
-  cursor: pointer;
-}
-
-
-/* Thu Nov 28 11:20:05 CST 2024 */
-/* inside details, ol list bottom margin should be zero */
-li > ol {
-    margin: 0 0 0px;
-}
-
-/* inside details, left padding should be small */
-menu, ol, ul {
-    padding: 0 0 0 10px;
-}
