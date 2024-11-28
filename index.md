@@ -13,13 +13,13 @@
 
 视频在博物馆中也是一种特殊的展品。例如，荷兰的犹太人纪念馆里，将二战大屠杀幸存者的访谈放在显示器上，旁边有耳机，观众走到旁边，可以坐下，戴上耳机（可以是多副），听取口述历史。再如美国的二战博物馆，在Youtube上有口述历史系列访谈。
 
-剪辑长篇访谈音视频(talking heads)，特别是在资源有限(设备、人员、时间、资金）的情况下，有几个问题。一是尽可能保证音频/视频的高品质，使用20%的成本，达到80%的专业制作团队的水平；二是提高剪辑效率，Radiolab声称的素材比是45:1，Apocalypse Now的素材比是90:1，Michael Rosenblum的建议是600分钟真实事件-20分钟的拍摄素材-1分钟成片，在这样海量素材之下，需要有高效的剪辑工具。任课老师之一康师傅将录制自己的Podcast时的经验，结合[BBC Paper Edit](https://bbcnewslabs.co.uk/projects/digital-paper-edit/)的方法论，制作了开源工具["糙音速剪辑"](https://github.com/scateu/tsv_edl.vim)，发布到欧洲开源开发者大会[FOSDEM](https://fosdem.org/2024/schedule/event/fosdem-2024-2804-edit-video-audio-with-or-without-vim/)，来自德国的记者试用后写了一篇[教程](https://zerwuerfnis.org/paper-cut-audio-editing-for-radio-journalism)。
+剪辑长篇访谈音视频(talking heads)，特别是在资源有限(设备、人员、时间、资金)的情况下，有几个问题: 一是尽可能保证音频/视频的高品质，使用20%的成本，达到80%的专业制作团队的水平；二是提高剪辑效率，Radiolab声称的素材比是45:1，Apocalypse Now的素材比是90:1，Michael Rosenblum的建议是600分钟真实事件-20分钟的拍摄素材-1分钟成片，在这样海量素材之下，需要有高效的剪辑工具。任课老师之一康师傅将录制自己的Podcast时的经验，结合[BBC Paper Edit](https://bbcnewslabs.co.uk/projects/digital-paper-edit/)的方法论，制作了开源工具["糙音速剪辑"](https://github.com/scateu/tsv_edl.vim)，发布到欧洲开源开发者大会[FOSDEM](https://fosdem.org/2024/schedule/event/fosdem-2024-2804-edit-video-audio-with-or-without-vim/)，来自德国的记者试用后写了一篇[教程](https://zerwuerfnis.org/paper-cut-audio-editing-for-radio-journalism)。
 
 
 
 进一步，我们不止于剪辑talking heads 🗣️，我们尝试从百年电影工业中汲取养分，服务于展览叙事。
 
-<details markdown="1"><summary> ▶️  点此展开 </summary>
+<details markdown="1"><summary> > 点此展开 </summary>
 
  - 多机位(Multicam): 采访中多机位的必要性: 把说话过程剪断，会使人的变化显得跳跃。而人类的视觉对于小的变化很敏感，但对于大的角度变化(大于30度的机位变化，30度原则)反而可以接受。在谈话的剪断跳跃点需要切到另一台摄像机，才能显得比较自然。
  - 多机位-好声音: 使用另一只手机作为录音机，近场收声。以击掌代替场记版🎬
@@ -51,7 +51,15 @@
  - Plan: 使用Spreadsheet来规划也是有效的办法
  - Plan: Michael Rosenblum也建议用纸和笔画出剪辑软件的时间线，V1 A1 A2, Sound bites, Narration，是行之有效的方法
 
-如Walter Murch的Rule of 6: Emotion 51%, Story 23%, Rhythm 10%, Eye-trace 7%, Two-dimensional plane of screen 5%, Three-dimensional space of action 4%，给观者带来的情感永远是最重要的。
+如Walter Murch的Rule of 6: 
+1. Emotion - 51%
+2. Story - 23%
+3. Rhythm - 10%
+4. Eye-trace - 7%
+5. Two-dimensional plane of screen - 5%
+6. Three-dimensional space of action - 4%
+
+给观者带来的情感永远是最重要的。
 
 参考:
  - In the blink of an eye, by Walter Murch
@@ -60,7 +68,7 @@
 
 </details>
 
-器识其先，文艺其从。器量与见识，人的内在涵养、精神境界，故事、展品的内容总是最重要的。上述注意事项/Cheatsheet，只是文艺，永远要为故事服务。
+器识其先，文艺其从。器量与见识，内容总是最重要的，上述注意事项/Cheatsheet，只是文艺，永远要为故事服务。
 
 
 ## 课程花絮
