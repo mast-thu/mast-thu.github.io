@@ -60,3 +60,7 @@ li > ol {
 menu, ol, ul {
     padding: 0 0 0 10px;
 }
+
+details > ul {
+	list-style-image: unset;
+}
