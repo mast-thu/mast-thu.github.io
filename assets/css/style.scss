@@ -49,3 +49,14 @@ summary:hover {
   cursor: pointer;
 }
 
+
+/* Thu Nov 28 11:20:05 CST 2024 */
+/* inside details, ol list bottom margin should be zero */
+p, ul, ol, table, pre, dl {
+    margin: 0 0 0px;
+}
+
+/* inside details, left padding should be small */
+menu, ol, ul {
+    padding: 0 0 0 5px;
+}
