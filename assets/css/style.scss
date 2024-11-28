@@ -52,7 +52,7 @@ summary:hover {
 
 /* Thu Nov 28 11:20:05 CST 2024 */
 /* inside details, ol list bottom margin should be zero */
-p, ul, ol, table, pre, dl {
+li > ol {
     margin: 0 0 0px;
 }
 
