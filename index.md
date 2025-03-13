@@ -15,7 +15,7 @@
 
 剪辑长篇访谈音视频(talking heads)，特别是在资源有限(设备、人员、时间、资金)的情况下，有几个问题: 一是尽可能保证音频/视频的高品质，使用20%的成本，达到80%的专业制作团队的水平；二是提高剪辑效率，Radiolab声称的素材比是45:1，Apocalypse Now的素材比是90:1，Michael Rosenblum的建议是600分钟真实事件-20分钟的拍摄素材-1分钟成片，在这样海量素材之下，需要有高效的剪辑工具。任课老师之一康师傅将录制自己的Podcast时的经验，结合[BBC Paper Edit](https://bbcnewslabs.co.uk/projects/digital-paper-edit/)的方法论，制作了开源工具["糙音速剪辑"](https://github.com/scateu/tsv_edl.vim)，发布到欧洲开源开发者大会[FOSDEM](https://fosdem.org/2024/schedule/event/fosdem-2024-2804-edit-video-audio-with-or-without-vim/)，来自德国的记者试用后写了一篇[教程](https://zerwuerfnis.org/paper-cut-audio-editing-for-radio-journalism)。
 
-
+体验[在线糙音速剪辑](https://scateu.me/tsv_edl.vim/)。
 
 进一步，我们不止于剪辑talking heads 🗣️，我们尝试从百年电影工业中汲取养分，服务于展览叙事。
 
