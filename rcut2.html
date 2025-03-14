@@ -855,7 +855,7 @@
 	      }
 	      async function loadTextFromURL() {
 		      // You can either hardcode the URL or use a prompt
-		      const url = prompt("Enter URL of the text file:", "textarea.txt");
+		      const url = "textarea.txt";
 
 		      if (!url) return; // User cancelled the prompt
 
@@ -884,6 +884,10 @@
 			      console.error('Error loading text:', error);
 			      alert('Error loading text file. Check console for details.');
 		      }
+
+		      localStorage.setItem('videoUrlPrefix', "https://q.scateu.me/SD240/");
+		      updatePrefixDisplay();
+		      reloadMedia();
 	      }
 	      function loadSample2(){
 		      const sample2 = `
@@ -1077,6 +1081,7 @@ EDL	00:00:09,528	00:00:11,169	| WhatCarCanYouGetForAGrand    |	WhatCarCanYouGetF
 	      }
 
 	      document.addEventListener('DOMContentLoaded', setupDropZone);
+	      document.addEventListener('DOMContentLoaded', loadTextFromURL);
 
 	      // Toggle Readonly of contentArea; useful in touch screen, like iPad and Tesla.
 	      function toggleReadonly() {
