@@ -1,3 +1,4 @@
+PREFIX: https://q.scateu.me/SD240/
 EDL	Record In	Record Out	Clipname	Subtitle	讲话者	Topic	B Roll	前依赖	后依赖
 EDL	00:15:50,133	00:15:51,533	| 访谈ALL |	我的作品在这边	刘弥叶	鼻涕-创作			
 EDL	00:15:51,533	00:15:53,933	| 访谈ALL |	是微观世界的一个主题介绍	刘弥叶	鼻涕-创作			
