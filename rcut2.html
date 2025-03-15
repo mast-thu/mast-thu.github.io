@@ -88,9 +88,13 @@
 		background-color: #f0f0f0;
 		cursor: default;
 	}
+	#contentArea[readonly]:focus {
+		border-color: #f0f0f0;
+		box-shadow: 0 0 80px rgba(51, 51, 51, 0.8);
+	}
 	#contentArea:focus {
 		border-color: #2196F3;
-		box-shadow: 0 0 20px rgba(33, 150, 243, 0.4);
+		box-shadow: 0 0 80px rgba(33, 150, 243, 0.4);
 	}
 	#currentTimecode {
 		display: inline-block;
@@ -184,10 +188,10 @@
       </div>
       <div class="toolbar">
          <button title="outside: Space; inside: Shift-Space" id="playPauseButton" onclick="togglePlayPause()">▶</button>
-         <button onclick="seekBack()">-10s</button>
-         <button onclick="seekForward()">+10s</button>
+         <button title="outside: Left" onclick="seekBack()">-3s</button>
+         <button title="outside: Right" onclick="seekForward()">+6s</button>
          <button title="s" onclick="findCurrentPosition()">Seek▼</button>
-         <button title="inside: Shift-Backspace; outside: x" onclick="toggleCurrentLine()">(un)X</button>  
+         <button title="inside: Shift-Backspace; outside: (Shift)-Backspace" onclick="toggleCurrentLine()">(un)X</button>  
          <button title="outside: i" onclick="markInPoint()">IN▼</button> 
          <button title="outside: o" onclick="markOutPoint()">OUT▼</button>  
          <button title="Ctrl-s" onclick="saveToLocal()">💾 Local</button>
@@ -241,9 +245,11 @@
 			      <input type="file" id="fileInput" accept=".srt" style="display: none;">
                      </div>
 		      <div class="toolbar">
-			      <button onclick="loadTextFromURL()"> Load Sample EDL file</button>
-			      <button onclick="loadSample2()"> Load Sample 2</button>
-	                     <a href="https://youtu.be/p7HuFz-RwsI" target="_blank" class="button-style"> Youtube Demo </a>
+			      <button onclick="loadTextFromURL()"> Load Sample EDL</button>
+			      <button onclick="loadSample2()"> Sample: Bunny</button>
+	                     <a href="https://youtu.be/p7HuFz-RwsI" target="_blank" class="button-style"> Youtube Demo 1</a>
+	                     <a href="https://youtu.be/wakjF79oBY4" target="_blank" class="button-style"> Youtube Demo 2</a>
+	                     <a href="https://www.bilibili.com/video/BV1sRQ2YVEdx/" target="_blank" class="button-style"> B: Demo 2</a>
 		      </div>
 		      <!--<div>
 			 <textarea id="debug1" placeholder="Debug Info 1"></textarea>
@@ -280,6 +286,16 @@
 			      playPauseButton.style.backgroundColor = ''; // Reset button color
 		      }
 	      }
+	      function doPlay() {
+		      if (videoPlayer.paused) {
+			      togglePlayPause();
+		      } 
+	      }
+	      function doPause() {
+		      if (!videoPlayer.paused) {
+			      togglePlayPause();
+		      } 
+	      }
 
 	      // Update button text when video state changes
 	      videoPlayer.addEventListener('play', () => {
@@ -289,6 +305,7 @@
 
 	      videoPlayer.addEventListener('pause', () => {
 		      playPauseButton.textContent = '▶'; //U+25B6
+		      playPauseButton.style.backgroundColor = ''; 
 	      });
 
 	      //utils
@@ -326,7 +343,10 @@
 	      function getCurrentLineContent() {
 		      // Get the full content of the textarea
 		      const fullText = textarea.value;
-		      const cursorPosition = textarea.selectionStart;
+		      // Use the last known position if textarea is not focused
+		      const cursorPosition = textarea.matches(':focus') ? 
+			      textarea.selectionStart : 
+			      lastKnownCursorPosition;
 
 		      // Find the start of the current line by searching backwards for a newline
 		      const lineStart = fullText.lastIndexOf('\n', cursorPosition - 1) + 1;
@@ -456,11 +476,11 @@
 
 
 	      function seekBack() {
-		      videoPlayer.currentTime = Math.max(0, videoPlayer.currentTime - 10);
+		      videoPlayer.currentTime = Math.max(0, videoPlayer.currentTime - 3);
 	      }
 
 	      function seekForward() {
-		      videoPlayer.currentTime = Math.min(videoPlayer.duration, videoPlayer.currentTime + 10);
+		      videoPlayer.currentTime = Math.min(videoPlayer.duration, videoPlayer.currentTime + 6);
 	      }
 
 	      textarea.addEventListener('blur', () => {
@@ -469,6 +489,7 @@
 
 	      textarea.addEventListener('click', () => {
 		      lastKnownCursorPosition = textarea.selectionStart;
+		      showCaret();
 	      });
 
 	      textarea.addEventListener('keyup', () => {
@@ -501,18 +522,23 @@
 				      textarea.value = lines.join('\n');
 
 				      // Maintain cursor position
-				      const beforeText = lines.slice(0, currentLineIndex).join('\n');
+				      /*const beforeText = lines.slice(0, currentLineIndex).join('\n');
 				      const newCursorPosition = beforeText.length + (currentLineIndex > 0 ? 1 : 0) + newLine.length;
-				      textarea.setSelectionRange(newCursorPosition, newCursorPosition);
+				      */
+				      textarea.setSelectionRange(lastKnownCursorPosition, lastKnownCursorPosition);
 
 				      // Visual feedback
-				      textarea.style.backgroundColor = '#ffffd0';
+				      textarea.style.backgroundColor = '#DA70D6';
 				      setTimeout(() => {
 					      textarea.style.backgroundColor = '';
-				      }, 200);
+				      }, 100);
 			      }
 		      }
-		      textarea.focus();
+		      // preserve textarea.focus status
+		      //if (isTextAreaFocused) {
+			      textarea.focus();
+		      //}
+		      showCaret();
 	      }
 
 	      function findCurrentPosition() {
@@ -588,6 +614,7 @@
 
 
 	      function markInPoint() {
+		      //TODO append a new line after cursor, instead of in the end.
 		      // Get current video time
 		      const currentTime = videoPlayer.currentTime;
 		      const timecode = secondsToTimecode(currentTime);
@@ -599,7 +626,7 @@
 
 
 		      // Create new EDL line
-		      const newEDLLine = `EDL\t${timecode}\t${timecode}\t| ${clipName} |\t\n`;
+		      const newEDLLine = `EDL\t${timecode}\t${timecode}\t| ${clipName} |\tSELECTION`;
 
 		      // Append to textarea
 		      textarea.value += (textarea.value && !textarea.value.endsWith('\n') ? '\n' : '') + newEDLLine;
@@ -615,6 +642,7 @@
 	      }
 
 	      function markOutPoint() {
+		      //TODO append a new line after cursor, instead of in the end.
 		      // Get current video time
 		      const currentTime = videoPlayer.currentTime;
 		      const timecode = secondsToTimecode(currentTime);
@@ -652,8 +680,10 @@
 		      }
 
 		      // Scroll to bottom and set cursor at end
+		      /*
 		      textarea.scrollTop = textarea.scrollHeight;
 		      textarea.setSelectionRange(textarea.value.length, textarea.value.length);
+		      */
 
 		      // Visual feedback
 		      textarea.style.backgroundColor = '#ffffd0';
@@ -662,33 +692,67 @@
 		      }, 200);
 	      }
 
-	      // Optional: Add keyboard shortcut (e.g., 'F' key) to find current position
+	      ////////////////// KEY BINDING START ///////////////////////
 	      document.addEventListener('keydown', function(e) {
-		      if ((e.key === 's' || e.key === 'S') && e.target.tagName !== 'TEXTAREA') {
-			      e.preventDefault(); // Prevent default 'find' dialog in browser
-			      findCurrentPosition();
-		      }
-		      // Check if the pressed key is spacebar and the target is not the textarea
-		      if (e.code === 'Space' && e.target.tagName !== 'TEXTAREA') {
-			      e.preventDefault(); // Prevent page scrolling
-			      togglePlayPause();
-		      }
-		      // Optional: Add keyboard shortcut (e.g., 'I' key)
-		      if ((e.key === 'i' || e.key === 'I') && e.target.tagName !== 'TEXTAREA') {
+		      if (e.target.tagName !== 'TEXTAREA') { // outside only
+			      if (e.key === 's' || e.key === 'S') {
+				      e.preventDefault(); // Prevent default 'find' dialog in browser
+				      findCurrentPosition();
+			      }
+			      // Check if the pressed key is spacebar and the target is not the textarea
+			      if (e.code === 'Space' || e.key === 'k') { //TODO j k l 
+				      e.preventDefault(); // Prevent page scrolling
+				      togglePlayPause();
+			      }
+			      if (e.key === 'l') { 
+				      e.preventDefault();
+				      doPlay();
+			      }
+			      // Optional: Add keyboard shortcut (e.g., 'I' key)
+			      if (e.key === 'i' || e.key === 'I') {
+				      e.preventDefault();
+				      markInPoint();
+			      }
+			      if (e.key === 'o' || e.key === 'O') {
+				      e.preventDefault();
+				      markOutPoint();
+			      }
+			      //if (e.key === 'x' || e.key === 'X') { // backspace or S-backspace
+		              if ( e.key === 'Backspace' || (e.key === 'Backspace' && e.shiftKey && !e.ctrlKey && !e.altKey)) { //Backspace or Shift-Backspace
+				      e.preventDefault();
+				      toggleCurrentLine();
+			      }
+			      if (e.key === 'ArrowUp' || e.key === 'ArrowDown') { // prevent unnecessary scrolling by arrow up/down
+				      e.preventDefault();
+			      }
+			      if (e.key === 'ArrowLeft') { 
+				      e.preventDefault();
+				      seekBack();
+			      }
+			      if (e.key === 'ArrowRight') { 
+				      e.preventDefault();
+				      seekForward();
+			      }
+//			      if (e.key === '.') {   // FIXME
+//				      e.preventDefault();
+//				      videoPlayer.seekToNextFrame();
+//			      }
+		      } 
+		      // inside only key handled in textarea.addEventListener('keydown', ....)
+
+		      // both inside and outside textarea. in whole document area.
+		      if (e.key === 'Escape') { // do focus in textarea
 			      e.preventDefault();
-			      markInPoint();
-		      }
-		      if ((e.key === 'o' || e.key === 'O') && e.target.tagName !== 'TEXTAREA') {
-			      e.preventDefault();
-			      markOutPoint();
+			      e.stopPropagation();
+			      /*textarea.focus();
+				isTextAreaFocused = true;*/
+			      document.getElementById('toggleReadonlyButton').focus();  // first unfocus. otherwise caret won't preserve
+			      toggleReadonly();
+			      textarea.focus();
 		      }
 		      if ((e.ctrlKey || e.metaKey) && e.key === 's') {
 			      e.preventDefault(); // Prevent browser's save dialog
 			      saveToLocal();
-		      }
-		      if ((e.key === 'x' || e.key === 'X') && e.target.tagName !== 'TEXTAREA') {
-			      e.preventDefault();
-			      toggleCurrentLine();
 		      }
 
 		      // Shift + minus: decrease video size
@@ -713,23 +777,24 @@
 		      }                
 
 		      // ESC
-		      if (e.key === 'Escape') {
+		      if (e.key === '`') {
 			      e.preventDefault();
-			      if (isTextAreaFocused) {
-				      // If textarea is focused, blur it
-				      textarea.blur();
+			      /*if (isTextAreaFocused) {
+				      // If textarea is focused, blur it 
+				      textarea.blur(); // Esc explicitly bind to UnFocus textarea. As in Vim.
 				      isTextAreaFocused = false;
 			      } else {
 				      // If textarea is not focused, focus it
+		              */
 				      textarea.focus();
 				      isTextAreaFocused = true;
+			      /*
 			      }
+			      */
 		      }
+
 	      });
-	      // Update timecode display
-	      videoPlayer.addEventListener('timeupdate', function() {
-		      timecodeDisplay.textContent = secondsToTimecode(videoPlayer.currentTime);
-	      });
+
 
 	      // Process EDL line when cursor moves
 	      textarea.addEventListener('click', function() {
@@ -745,35 +810,79 @@
 			      if (currentLine) {
 				      processEDLLine(currentLine);
 			      }
+			      showCaret();
 		      }
 	      });
 
 	      textarea.addEventListener('keydown', function(e) {
-		      if (e.key === 'Tab') {
+		      if (e.key === 'Tab') { //input a Tab
 			      e.preventDefault(); // Prevent default tab behavior
+			      if (!this.readOnly) {
+				      // Get cursor position
+				      const start = this.selectionStart;
+				      const end = this.selectionEnd;
 
-			      // Get cursor position
-			      const start = this.selectionStart;
-			      const end = this.selectionEnd;
+				      // Insert tab at cursor position
+				      this.value = this.value.substring(0, start) + '\t' + this.value.substring(end);
 
-			      // Insert tab at cursor position
-			      this.value = this.value.substring(0, start) + '\t' + this.value.substring(end);
-
-			      // Move cursor after tab
-			      this.selectionStart = this.selectionEnd = start + 1;
+				      // Move cursor after tab
+				      this.selectionStart = this.selectionEnd = start + 1;
+			      }
 		      }
 
-		      if (e.key === 'Backspace' && e.shiftKey && !e.ctrlKey && !e.altKey) {
+		      // no matter if write allowed
+		      if (e.key === 'Backspace' && e.shiftKey && !e.ctrlKey && !e.altKey) { //Shift-Backspace
 			      e.preventDefault();
 			      toggleCurrentLine();
 		      }
-		      if (e.key === ' ' && e.shiftKey && !e.ctrlKey && !e.altKey) {
+		      if (e.key === ' ' && e.shiftKey && !e.ctrlKey && !e.altKey) { // Shift-Space
 			      e.preventDefault();
 			      togglePlayPause();
 		      }
-	      });
 
-	      //////////////////// localStorage
+
+		      if (this.readOnly) { // can't write
+			      if (e.key === ' ')  { // Space
+				      e.preventDefault();
+				      togglePlayPause();
+			      }
+			      if (e.key === 'Backspace')  { // Backspace
+				      e.preventDefault();
+				      toggleCurrentLine();
+			      }
+			      if (e.key === 'i' || e.key === 'I') {
+				      e.preventDefault();
+				      markInPoint();
+			      }
+			      if (e.key === 'o' || e.key === 'O') {
+				      e.preventDefault();
+				      markOutPoint();
+			      }
+			      if (e.key === 's' || e.key === 'S') {
+				      e.preventDefault();
+				      findCurrentPosition();
+			      }
+			      if (e.key === 'Enter') { // same as click
+				      e.preventDefault();
+				      const currentLine = getCurrentLineContent();
+				      if (currentLine) {
+					      processEDLLine(currentLine);
+				      }
+			      }
+			      if (e.key === '|') {
+				      e.preventDefault();
+				      //TODO  Split
+			      }
+			      if (e.key === 'j' || e.key === 'J') {
+				      e.preventDefault();
+				      //TODO  Join
+			      }
+		      } else { // only when writable
+		      }
+	      });
+	      ////////////////// KEY BINDING END ///////////////////////
+
+	      /////////////////   localStorage        ///////////////// 
 
 	      // Function to save content to localStorage
 	      function saveToLocal() {
@@ -855,7 +964,7 @@
 	      }
 	      async function loadTextFromURL() {
 		      // You can either hardcode the URL or use a prompt
-		      const url = "textarea.txt";
+		      const url = prompt("Enter URL of the text file:", "textarea.txt");
 
 		      if (!url) return; // User cancelled the prompt
 
@@ -884,26 +993,22 @@
 			      console.error('Error loading text:', error);
 			      alert('Error loading text file. Check console for details.');
 		      }
-
-		      localStorage.setItem('videoUrlPrefix', "https://q.scateu.me/SD240/");
-		      updatePrefixDisplay();
-		      reloadMedia();
 	      }
 	      function loadSample2(){
 		      const sample2 = `
-EDL	00:00:03,019	00:00:03,019	| BigBuckBunny                 |	BigBuckBunny
-EDL	00:00:03,019	00:00:07,033	| ElephantsDream               |	ElephantsDream
-EDL	00:00:09,528	00:00:11,169	| ForBiggerBlazes              |	ForBiggerBlazes
-EDL	00:00:03,019	00:00:03,019	| ForBiggerEscapes             |	ForBiggerEscapes
-EDL	00:00:03,019	00:00:07,033	| ForBiggerFun                 |	ForBiggerFun
-EDL	00:00:09,528	00:00:11,169	| ForBiggerJoyrides            |	ForBiggerJoyrides
-EDL	00:00:03,019	00:00:03,019	| ForBiggerMeltdowns           |	ForBiggerMeltdowns
-EDL	00:00:03,019	00:00:07,033	| Sintel                       |	Sintel
-EDL	00:00:09,528	00:00:11,169	| SubaruOutbackOnStreetAndDirt |	SubaruOutbackOnStreetAndDirt
-EDL	00:00:03,019	00:00:03,019	| TearsOfSteel                 |	TearsOfSteel
-EDL	00:00:03,019	00:00:07,033	| VolkswagenGTIReview          |	VolkswagenGTIReview
-EDL	00:00:09,528	00:00:11,169	| WeAreGoingOnBullrun          |	WeAreGoingOnBullrun
-EDL	00:00:09,528	00:00:11,169	| WhatCarCanYouGetForAGrand    |	WhatCarCanYouGetForAGrand
+EDL	00:00:00,000	00:09:56,474	| BigBuckBunny                 |	..........
+EDL	00:00:00,000	00:10:53,803	| ElephantsDream               |	..........
+EDL	00:00:00,000	00:00:15,022	| ForBiggerBlazes              |	..........
+EDL	00:00:00,000	00:00:15,046	| ForBiggerEscapes             |	..........
+EDL	00:00:00,000	00:01:00,070	| ForBiggerFun                 |	..........
+EDL	00:00:00,000	00:00:15,046	| ForBiggerJoyrides            |	..........
+EDL	00:00:00,000	00:00:15,046	| ForBiggerMeltdowns           |	..........
+EDL	00:00:00,000	00:14:47,999	| Sintel                       |	..........
+EDL	00:00:00,000	00:09:54,570	| SubaruOutbackOnStreetAndDirt |	..........
+EDL	00:00:00,000	00:12:14,260	| TearsOfSteel                 |	..........
+EDL	00:00:00,000	00:09:53,803	| VolkswagenGTIReview          |	..........
+EDL	00:00:00,000	00:00:47,461	| WeAreGoingOnBullrun          |	..........
+EDL	00:00:00,000	00:09:27,379	| WhatCarCanYouGetForAGrand    |	..........
 `;
 		      textarea.value = sample2;
 		      localStorage.setItem('videoUrlPrefix', "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/");
@@ -944,6 +1049,11 @@ EDL	00:00:09,528	00:00:11,169	| WhatCarCanYouGetForAGrand    |	WhatCarCanYouGetF
 		      updatePrefixDisplay();
 		      reloadMedia();
 	      }
+
+	      // Update timecode display
+	      videoPlayer.addEventListener('timeupdate', function() {
+		      timecodeDisplay.textContent = secondsToTimecode(videoPlayer.currentTime);
+	      });
 
 	      function updatePrefixDisplay() {
 		      const prefixDisplay = document.getElementById('currentPrefix');
@@ -1081,13 +1191,34 @@ EDL	00:00:09,528	00:00:11,169	| WhatCarCanYouGetForAGrand    |	WhatCarCanYouGetF
 	      }
 
 	      document.addEventListener('DOMContentLoaded', setupDropZone);
-	      document.addEventListener('DOMContentLoaded', loadTextFromURL);
 
 	      // Toggle Readonly of contentArea; useful in touch screen, like iPad and Tesla.
 	      function toggleReadonly() {
 		      textarea.readOnly = !textarea.readOnly; // Toggle readonly status
-		      document.getElementById('toggleReadonlyButton').textContent = textarea.readOnly ? '🔏' : '🖋️';
+		      const readonlyButton = document.getElementById('toggleReadonlyButton');
+		      readonlyButton.textContent = textarea.readOnly ? '🔏' : '🖋️';
 		      textarea.style.backgroundColor = textarea.readOnly ? '#f0f0f0' : 'white';
+		      showCaret();
+		      textarea.focus();
+	      }
+	      function showCaret() { // a simple way to show cursor / caret by selecting a char.
+		      if (textarea.selectionStart != textarea.selectionEnd) { // region selection
+			      return
+		      }
+
+		      const cursorPosition = textarea.matches(':focus') ? 
+			      textarea.selectionStart : 
+			      lastKnownCursorPosition;
+		      if (cursorPosition < textarea.value.length) {
+			      if (textarea.value[cursorPosition] === '\n') {
+				      textarea.setSelectionRange(cursorPosition-1, cursorPosition);
+			      } else {
+				      textarea.setSelectionRange(cursorPosition, cursorPosition +1);
+			      } 
+		       }else { // last char
+			       //textarea.setSelectionRange(cursorPosition-1, cursorPosition);
+		       }
+
 	      }
 
       </script>
