@@ -8,6 +8,9 @@
 
 本课程依托清华大学艺术博物馆的丰富馆藏、标志性建筑空间和整体艺术氛围，通过“设计思维”、“为生活策展”、“博物馆之光”和“剪出你的艺博故事”四个单元，将美育与我校本科专业基础课程进行有机融合，以期达到辅助专业教学、服务大学美育和拓展师生通识视野的总体目标，让同学在感知、理解、表达和创造美的过程中，理解专业知识与技能在科技伦理与艺术生活中具备同样的价值，最终达成健全人格的养成。
 
+## 2024年秋
+
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=116640708565042&bvid=BV12nVK6FEMN&cid=38629412761&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ### 多媒体部分
 
