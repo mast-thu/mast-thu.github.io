@@ -103,7 +103,7 @@
 
 ## 过往展出 - 2024秋季学期
 
-<iframe width="100%" height="500px" src="//player.bilibili.com/player.html?isOutside=true&aid=116640708565042&bvid=BV12nVK6FEMN&cid=38629412761&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<iframe width="100%" height="500px" src="//player.bilibili.com/player.html?isOutside=true&aid=116640708565042&bvid=BV12nVK6FEMN&cid=38629412761&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## 过往展出 - 2024春季学期
 
