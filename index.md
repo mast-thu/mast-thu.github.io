@@ -8,6 +8,25 @@
 
 本课程依托清华大学艺术博物馆的丰富馆藏、标志性建筑空间和整体艺术氛围，通过“设计思维”、“为生活策展”、“博物馆之光”和“剪出你的艺博故事”四个单元，将美育与我校本科专业基础课程进行有机融合，以期达到辅助专业教学、服务大学美育和拓展师生通识视野的总体目标，让同学在感知、理解、表达和创造美的过程中，理解专业知识与技能在科技伦理与艺术生活中具备同样的价值，最终达成健全人格的养成。
 
+## 正在展出 - 2026春季学期
+
+### 《瑕路·相逢》展览介绍  by 陈嘉欣
+
+<video src="https://cloud.tsinghua.edu.cn/seafhttp/files/28935fb8-035f-4a8f-bbe4-e3cd801b769c/%E3%80%8A%E7%91%95%E8%B7%AF%C2%B7%E7%9B%B8%E9%80%A2%E3%80%8B%E5%B1%95%E8%A7%88%E4%BB%8B%E7%BB%8D.mp4"> </video>
+
+### What If by 门尔柔
+
+<video preload="auto" src="https://cloud.tsinghua.edu.cn/seafhttp/files/1bba1e2d-421b-46b7-984a-f325c5e0bba6/What%20if...mp4"></video>
+
+
+### 艺术家简介
+
+### 展品一览
+
+### 展陈设计
+
+### 影像资源
+
 ## 2024年秋
 
 <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=116640708565042&bvid=BV12nVK6FEMN&cid=38629412761&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
