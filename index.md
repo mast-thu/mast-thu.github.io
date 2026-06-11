@@ -99,6 +99,10 @@
 
 ## 课程花絮
 
+2026年春 - 剪辑部分教学示例 - 飞瓶v2
+
+<iframe width="100%" height="500px" src="//player.bilibili.com/player.html?isOutside=true&aid=116731154536419&bvid=BV1m7Eq6cEFM&cid=39038748821&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
 ## 展览回顾
 
 ## 过往展出 - 2024秋季学期
