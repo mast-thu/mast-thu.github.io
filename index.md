@@ -34,9 +34,6 @@
  - [MAST 2026 - Footage - Jun 10, 2026 - Part2, by iPhone](https://www.bilibili.com/video/BV1PqEe6DE4b/)
  - [MAST2024秋-ALL\_INTERVIEW\_NOKANG](https://www.bilibili.com/video/BV1DqG262E7K/)
 
-## 2024年秋
-
-<iframe width="100%" src="//player.bilibili.com/player.html?isOutside=true&aid=116640708565042&bvid=BV12nVK6FEMN&cid=38629412761&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ### 多媒体部分
 
@@ -104,25 +101,12 @@
 
 ## 展览回顾
 
-## 正在展出 - 2024秋季学期
+## 过往展出 - 2024秋季学期
 
-### 艺术家简介
-
-### 展品一览
-
-### 展陈设计
-
-### 影像资源
+<iframe width="100%" src="//player.bilibili.com/player.html?isOutside=true&aid=116640708565042&bvid=BV12nVK6FEMN&cid=38629412761&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## 过往展出 - 2024春季学期
 
-### 艺术家简介
-
-### 展品一览
-
-### 展陈设计
-
-### 影像资源
 
 ## 互动留言 & 联系方式
 
