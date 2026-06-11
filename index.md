@@ -14,6 +14,7 @@
 
 <video src="https://cloud.tsinghua.edu.cn/seafhttp/files/28935fb8-035f-4a8f-bbe4-e3cd801b769c/%E3%80%8A%E7%91%95%E8%B7%AF%C2%B7%E7%9B%B8%E9%80%A2%E3%80%8B%E5%B1%95%E8%A7%88%E4%BB%8B%E7%BB%8D.mp4"> </video>
 
+
 ### What If by 门尔柔
 
 <video preload="auto" src="https://cloud.tsinghua.edu.cn/seafhttp/files/1bba1e2d-421b-46b7-984a-f325c5e0bba6/What%20if...mp4"></video>
@@ -25,7 +26,14 @@
 
 ### 展陈设计
 
-### 影像资源
+### 影像资源 & Raw Footage
+
+ - 剪辑教程示例: [裁缝修衣v2](https://www.bilibili.com/video/BV1RCQ7BqEzw/)
+ - [MAST 2026 - Footage - May 23, 2026](https://www.bilibili.com/video/BV1e7Ee6eE7N/)
+ - [MAST 2026 - Footage - Jun 3, 2026](https://www.bilibili.com/video/BV1V7Ee6eEhi/)
+ - [MAST 2026 - Footage - Jun 10, 2026 - Part1 by BMCC 4k](https://www.bilibili.com/video/BV1PqEe6DE6B/)
+ - [MAST 2026 - Footage - Jun 10, 2026 - Part2, by iPhone](https://www.bilibili.com/video/BV1PqEe6DE4b/)
+ - [MAST2024秋-ALL\_INTERVIEW\_NOKANG](https://www.bilibili.com/video/BV1DqG262E7K/)
 
 ## 2024年秋
 
