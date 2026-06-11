@@ -29,7 +29,7 @@
 
 ### 影像资源 & Raw Footage
 
- - 剪辑教程示例: [裁缝修衣v2](https://www.bilibili.com/video/BV1RCQ7BqEzw/)
+ - 剪辑教程示例: [裁缝修衣v2](https://www.bilibili.com/video/BV1RCQ7BqEzw/) \| [飞瓶v2](https://www.bilibili.com/video/BV1m7Eq6cEFM/?bvid=BV1m7Eq6cEFM)
  - MAST 2026 - Footage: [May 23](https://www.bilibili.com/video/BV1e7Ee6eE7N/) \| [Jun 3](https://www.bilibili.com/video/BV1V7Ee6eEhi/) \| [Jun 10 - Part1 by BMCC 4k](https://www.bilibili.com/video/BV1PqEe6DE6B/) \| [Jun 10 - Part2, by iPhone](https://www.bilibili.com/video/BV1PqEe6DE4b/)
  - [MAST2024秋-ALL\_INTERVIEW\_NOKANG](https://www.bilibili.com/video/BV1DqG262E7K/)
 
